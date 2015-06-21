@@ -1,8 +1,8 @@
 # Cleaner
 A text and GUI based tool that finds all useless/empty files and directories and can remove them.
 
-
-
+<br>
+<br>
 
 Command-based usage:
 java -jar Cleaner.jar excludedPaths -option
@@ -14,7 +14,8 @@ java -jar Cleaner.jar excludedPaths -option
 Example:
 java -jar Cleaner.jar C:/Users/Admin/Documents/file.txt,C:/Users/Admin/Downloads -f
 
-
+<br>
+<br>
 
 GUI-based usage:
 java - jar Cleaner.jar
