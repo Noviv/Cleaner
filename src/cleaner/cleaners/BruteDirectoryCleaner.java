@@ -6,18 +6,23 @@ import cleaner.utils.CleanerTextUtils;
 
 public class BruteDirectoryCleaner extends Cleaner {
 
-    public BruteDirectoryCleaner(ArrayList<String> excludedPaths_) {
+    public BruteDirectoryCleaner(ArrayList<String> excludedPaths_, boolean text_) {
         total = root.getTotalSpace() - root.getUsableSpace();
         empties = new ArrayList<>();
         excludedPaths = excludedPaths_;
         sum = 0l;
+        text = text_;
     }
 
     @Override
     public ArrayList<File> getEmpties() {
-        CleanerTextUtils.start("Directory");
+        if (text) {
+            CleanerTextUtils.start("Directory");
+        }
         fire(root);
-        CleanerTextUtils.finish("Directory");
+        if (text) {
+            CleanerTextUtils.finish("Directory");
+        }
         return empties;
     }
 
@@ -38,6 +43,9 @@ public class BruteDirectoryCleaner extends Cleaner {
                 sum += file.length();
             }
         }
-        CleanerTextUtils.setDirStatus(empties.size(), CleanerTextUtils.round(100.0 * sum / (float) total));
+        update();
+        if (text) {
+            CleanerTextUtils.setDirStatus(empties.size(), getPercent());
+        }
     }
 }

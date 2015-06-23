@@ -6,18 +6,23 @@ import cleaner.utils.CleanerTextUtils;
 
 public class BruteFileCleaner extends Cleaner {
 
-    public BruteFileCleaner(ArrayList<String> excludedPaths_) {
+    public BruteFileCleaner(ArrayList<String> excludedPaths_, boolean text_) {
         total = root.getTotalSpace() - root.getUsableSpace();
         empties = new ArrayList<>();
         excludedPaths = excludedPaths_;
         sum = 0l;
+        text = text_;
     }
 
     @Override
     public ArrayList<File> getEmpties() {
-        CleanerTextUtils.start("File");
+        if (text) {
+            CleanerTextUtils.start("File");
+        }
         fire(root);
-        CleanerTextUtils.finish("File");
+        if (text) {
+            CleanerTextUtils.finish("File");
+        }
         return empties;
     }
 
@@ -37,6 +42,9 @@ public class BruteFileCleaner extends Cleaner {
                 }
             }
         }
-        CleanerTextUtils.setFileStatus(empties.size(), CleanerTextUtils.round(100.0 * sum / (float) total));
+        update();
+        if (text) {
+            CleanerTextUtils.setFileStatus(empties.size(), getPercent());
+        }
     }
 }

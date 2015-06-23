@@ -1,4 +1,4 @@
-package cleaner.main;
+package cleaner.main.text;
 
 import cleaner.utils.CleanerType;
 import java.io.File;
@@ -17,13 +17,13 @@ public class CleanerText {
     public CleanerText(ArrayList<String> exc, CleanerType type_) {
         switch (type_) {
             case FILE:
-                cleaner = new BruteFileCleaner(exc);
+                cleaner = new BruteFileCleaner(exc, true);
                 break;
             case DIRECTORY:
-                cleaner = new BruteDirectoryCleaner(exc);
+                cleaner = new BruteDirectoryCleaner(exc, true);
                 break;
             case FILE_DIRECTORY:
-                cleaner = new BruteDualCleaner(exc);
+                cleaner = new BruteDualCleaner(exc, true);
                 break;
         }
         type = type_;

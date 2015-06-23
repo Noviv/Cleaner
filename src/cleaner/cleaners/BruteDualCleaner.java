@@ -8,13 +8,13 @@ public class BruteDualCleaner extends Cleaner {
     private BruteDirectoryCleaner dirCleaner;
     private BruteFileCleaner fileCleaner;
 
-    public BruteDualCleaner(ArrayList<String> excludedPaths_) {
+    public BruteDualCleaner(ArrayList<String> excludedPaths_, boolean text) {
         total = root.getTotalSpace() - root.getUsableSpace();
         empties = new ArrayList<>();
         excludedPaths = excludedPaths_;
         sum = 0l;
-        dirCleaner = new BruteDirectoryCleaner(excludedPaths_);
-        fileCleaner = new BruteFileCleaner(excludedPaths_);
+        dirCleaner = new BruteDirectoryCleaner(excludedPaths_, text);
+        fileCleaner = new BruteFileCleaner(excludedPaths_, text);
     }
 
     @Override

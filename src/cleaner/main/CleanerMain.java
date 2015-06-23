@@ -1,8 +1,11 @@
 package cleaner.main;
 
+import cleaner.main.text.CleanerText;
+import cleaner.main.gui.CleanerGUI;
 import cleaner.utils.CleanerType;
 import java.util.ArrayList;
 import java.util.Arrays;
+import javax.swing.JOptionPane;
 
 public class CleanerMain {
 
