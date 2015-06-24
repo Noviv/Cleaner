@@ -4,6 +4,7 @@ import cleaner.cleaners.BruteDirectoryCleaner;
 import cleaner.cleaners.BruteDualCleaner;
 import cleaner.cleaners.BruteFileCleaner;
 import cleaner.cleaners.Cleaner;
+import cleaner.utils.CleanerTextUtils;
 import java.awt.Desktop;
 import java.io.File;
 import java.util.ArrayList;
@@ -12,17 +13,20 @@ import javax.swing.AbstractListModel;
 import javax.swing.JOptionPane;
 
 public class CleanerGUI extends javax.swing.JFrame {
-    
+
     private Cleaner cleaner;
     private File[] emptiesList;
-    
+    private long selectedBytes;
+
     public CleanerGUI() {
         emptiesList = new File[]{};
+        selectedBytes = 0l;
         initComponents();
         setLocationRelativeTo(null);
+        bothCleanerButton.setEnabled(false);
         setVisible(true);
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -41,6 +45,7 @@ public class CleanerGUI extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         excludedTextArea = new javax.swing.JTextArea();
         typeLabel1 = new javax.swing.JLabel();
+        selectedBytesLabel = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -82,6 +87,11 @@ public class CleanerGUI extends javax.swing.JFrame {
             }
         });
         fileList.setToolTipText("Select items to delete.");
+        fileList.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fileListMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(fileList);
 
         jButton1.setText("Delete Selected");
@@ -108,6 +118,8 @@ public class CleanerGUI extends javax.swing.JFrame {
 
         typeLabel1.setText("Excluded Directories/Files");
 
+        selectedBytesLabel.setText("0 kilobytes");
+
         jMenu1.setText("Cleaner");
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE, 0));
@@ -129,7 +141,7 @@ public class CleanerGUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 509, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 1, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -162,6 +174,10 @@ public class CleanerGUI extends javax.swing.JFrame {
                 .addGap(224, 224, 224)
                 .addComponent(runButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(selectedBytesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(209, 209, 209))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -187,7 +203,9 @@ public class CleanerGUI extends javax.swing.JFrame {
                 .addComponent(cleanerProgressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(selectedBytesLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -259,6 +277,15 @@ public class CleanerGUI extends javax.swing.JFrame {
         excludedTextArea.setText("");
     }//GEN-LAST:event_excludedTextAreaMouseClicked
 
+    private void fileListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fileListMouseClicked
+        selectedBytes = 0l;
+        for (int i : fileList.getSelectedIndices()) {
+            selectedBytes += emptiesList[i].length();
+        }
+        selectedBytes /= 1000l;
+        selectedBytesLabel.setText(CleanerTextUtils.round((double) ((float) selectedBytes)) + " kb");
+    }//GEN-LAST:event_fileListMouseClicked
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton bothCleanerButton;
     private javax.swing.JProgressBar cleanerProgressBar;
@@ -274,6 +301,7 @@ public class CleanerGUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JButton runButton;
+    private javax.swing.JLabel selectedBytesLabel;
     private javax.swing.ButtonGroup typeButtonGroup;
     private javax.swing.JLabel typeLabel;
     private javax.swing.JLabel typeLabel1;
