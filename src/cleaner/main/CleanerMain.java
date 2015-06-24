@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 public class CleanerMain {
 
     public static void main(String[] args) {
+        System.exit(1);
         if (args.length == 1 || args.length == 2) {
             ArrayList<String> exc = new ArrayList<>();
             exc.addAll(Arrays.asList(args[0].split(",")));
