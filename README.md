@@ -6,7 +6,7 @@ A text and GUI based tool that finds all useless/empty files and directories and
 <br>
 
 ## Command-based usage:<br>
-  java -jar Cleaner.jar [excludedPaths] [-option]
+  <code>java -jar Cleaner.jar [excludedPaths] [-option]</code>
 <br><br>
 <code>-f: File cleaner</code><br>
 <code>-d: Directory cleaner</code><br>
@@ -20,6 +20,6 @@ Example:<br>
 <br>
 
 ## GUI-based usage:
-java -jar Cleaner.jar
+<code>java -jar Cleaner.jar</code>
 
 OR double click jar
