@@ -1,5 +1,10 @@
 # Cleaner [![Build Status](https://travis-ci.org/Noviv/Cleaner.svg?branch=master)](https://travis-ci.org/Noviv/Cleaner)
-A text and GUI based tool that finds all useless/empty files and directories and can remove them. Simply place the jar in the drive you want it to scan, and run it using one of two methods described below.
+A text and GUI based tool that finds all useless/empty files and directories and can remove them.<br>
+
+## Run
+1. Download Cleaner.jar from the dist folder.
+2. Place the jar in any folder of the drive you want it to clean.
+3. Run using one of the two methods described below.
 
 <br>
 <br>
