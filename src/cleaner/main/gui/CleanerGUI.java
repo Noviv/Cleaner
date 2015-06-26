@@ -60,6 +60,7 @@ public class CleanerGUI extends javax.swing.JFrame {
         cleanerProgressBar.setStringPainted(true);
 
         typeButtonGroup.add(fileCleanerButton);
+        fileCleanerButton.setSelected(true);
         fileCleanerButton.setText("File");
 
         typeButtonGroup.add(directoryCleanerButton);
@@ -67,6 +68,7 @@ public class CleanerGUI extends javax.swing.JFrame {
 
         typeButtonGroup.add(bothCleanerButton);
         bothCleanerButton.setText("Both");
+        bothCleanerButton.setEnabled(false);
 
         typeLabel.setText("Cleaner Type");
 
@@ -118,7 +120,7 @@ public class CleanerGUI extends javax.swing.JFrame {
 
         typeLabel1.setText("Excluded Directories/Files");
 
-        selectedBytesLabel.setText("0 kilobytes");
+        selectedBytesLabel.setText("0 bytes");
 
         jMenu1.setText("Cleaner");
 
@@ -176,8 +178,8 @@ public class CleanerGUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(selectedBytesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(209, 209, 209))
+                .addComponent(selectedBytesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(116, 116, 116))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -282,8 +284,7 @@ public class CleanerGUI extends javax.swing.JFrame {
         for (int i : fileList.getSelectedIndices()) {
             selectedBytes += emptiesList[i].length();
         }
-        selectedBytes /= 1000l;
-        selectedBytesLabel.setText(CleanerTextUtils.round((double) ((float) selectedBytes)) + " kb");
+        selectedBytesLabel.setText(selectedBytes + " bytes");
     }//GEN-LAST:event_fileListMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

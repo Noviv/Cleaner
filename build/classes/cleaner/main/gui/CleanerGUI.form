@@ -102,8 +102,8 @@
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="selectedBytesLabel" min="-2" pref="107" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="209" max="-2" attributes="0"/>
+              <Component id="selectedBytesLabel" min="-2" pref="98" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -167,6 +167,7 @@
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="typeButtonGroup"/>
         </Property>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="File"/>
       </Properties>
     </Component>
@@ -184,6 +185,7 @@
           <ComponentRef name="typeButtonGroup"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Both"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="typeLabel">
@@ -262,7 +264,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="selectedBytesLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="0 kilobytes"/>
+        <Property name="text" type="java.lang.String" value="0 bytes"/>
       </Properties>
     </Component>
   </SubComponents>
