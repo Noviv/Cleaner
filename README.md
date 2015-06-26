@@ -8,6 +8,7 @@ A text and GUI based tool that finds all useless/empty files and directories and
 ## Command-based usage:<br>
   <code>java -jar Cleaner.jar [excludedPaths] [-option]</code>
 <br><br>
+Options:<br>
 <code>-f: File cleaner</code><br>
 <code>-d: Directory cleaner</code><br>
 <code>-b: Both</code><br>
