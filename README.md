@@ -5,21 +5,21 @@ A text and GUI based tool that finds all useless/empty files and directories and
 <br>
 <br>
 
-Command-based usage:<br>
-java -jar Cleaner.jar excludedPaths -option
+## Command-based usage:<br>
+  java -jar Cleaner.jar [excludedPaths] [-option]
 <br><br>
--f: File cleaner<br>
--d: Directory cleaner<br>
--b: Both<br>
+<code>-f: File cleaner</code><br>
+<code>-d: Directory cleaner</code><br>
+<code>-b: Both</code><br>
 
 Example:<br>
-java -jar Cleaner.jar C:/Users/Admin/Documents/file.txt,C:/Users/Admin/Downloads -f
+<code>java -jar Cleaner.jar C:/Users/Admin/Documents/file.txt,C:/Users/Admin/Downloads -f</code>
 
 <br>
 <br>
 <br>
 
-GUI-based usage:
-java - jar Cleaner.jar
+## GUI-based usage:
+java -jar Cleaner.jar
 
 OR double click jar
