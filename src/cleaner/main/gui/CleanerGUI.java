@@ -85,7 +85,7 @@ public class CleanerGUI extends javax.swing.JFrame {
             }
 
             public Object getElementAt(int i) {
-                return emptiesList[i].getName();
+                return emptiesList[i].getAbsolutePath();
             }
         });
         fileList.setToolTipText("Select items to delete.");

@@ -1,5 +1,6 @@
 package cleaner.cleaners;
 
+import cleaner.filters.CleanerNet;
 import cleaner.utils.CleanerTextUtils;
 import java.io.File;
 import java.util.ArrayList;
@@ -9,6 +10,7 @@ public abstract class Cleaner {
 
     protected File root = new File("/");
     protected ArrayList<String> excludedPaths;
+    protected CleanerNet net;
     protected JProgressBar bar;
 
     protected long total;
