@@ -1,6 +1,9 @@
 *.class
+
+# Coverity
 cov-int/
 Cleaner.zip
+Cleaner.tgz
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
