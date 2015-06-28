@@ -2,17 +2,3 @@ language: java
 
 jdk:
   - oraclejdk8
-  
-env:
-  global:
-   - secure: "hBWadYWlIPxlJ6Z8Opi/HL5ukTy72j5VimcJtpr0y1nwpJe0OMD4EqdbyGJmtksBQSFEucZAPA2UEfbrQaQv5pgLxK3kr1pt9mLsbQ7/4xYCCno/ZjqO0poDnP82PYi/+H1KefVhKhqiDXBCVcrMGOhtksKPBNBMKZV6wA88G+tF8SbRPIRkUEF8LN2wwPxgFE8An5SS+eMw5jlKqHVqYoWDE54G6fNsByWoUIplhNZTJHabWR1w+xKun3qDGXCyqbZzrCIL+6ZQO0fHJFoRDKrXPZJ4pcc6H/yLONvMhCzFXk1nGhsU8960wrwsCGPbMHgDvAXGzClZksXPwe5px+FHQqMeNf5N7wKIVK0v4VlRV0oBQVH6WEKwxZ4RsacWilj9GUkWdE7bQ5h6Fkk/8XKAQdXTxVrx+0HvHRWYCK9ohdyEWNHZDQe2n6Hc4bm3PF3mYsqw00iYTybryTMS55Me89t9aO/ubdqkfv+MdEoxE8lB0pvzf4Id7nOOt7VAQghpaUYNlylCsIrUwfRYiHiEtNV1q2wiZUSG2SZNsRqQ8BP3T8XcUap0Q0YBgbY0mC6Yza/SncJXNqdsFOQoCRtb5RZ+UMQ35X2i2pa29xqZRsIb6tGgcu0pcr6N5uFF0U5YnYsLyUne1F1RPsvp5mr5ISbeCDsQVjiH9DtFL+U="
-
-addons:
-  coverity_scan:
-    project:
-      name: "Noviv/Cleaner"
-      description: "A text and GUI based tool that finds all useless/empty files and directories and can remove them."
-    notification_email: mwebbmwebb@gmail.com
-    build_command_prepend: "ant test"
-    build_command: "ant"
-    branch_pattern: master
