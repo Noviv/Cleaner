@@ -1,4 +1,4 @@
-# Cleaner [![Build Status](https://travis-ci.org/Noviv/Cleaner.svg?branch=master)](https://travis-ci.org/Noviv/Cleaner) [![Coverity Status](https://scan.coverity.com/projects/5628/badge.svg)](https://scan.coverity.com/projects/5628)
+# Cleaner [![Build Status](https://travis-ci.org/Noviv/Cleaner.svg?branch=master)](https://travis-ci.org/Noviv/Cleaner)
 
 A text and GUI based tool that finds all useless/empty files and directories and can remove them.<br>
 
