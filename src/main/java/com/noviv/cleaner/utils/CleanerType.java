@@ -1,4 +1,4 @@
-package main.java.cleaner.utils;
+package main.java.com.noviv.cleaner.utils;
 
 public enum CleanerType {
 

@@ -1,8 +1,8 @@
-package main.java.cleaner.main;
+package main.java.com.noviv.cleaner.main;
 
-import main.java.cleaner.main.text.CleanerText;
-import main.java.cleaner.main.gui.CleanerGUI;
-import main.java.cleaner.utils.CleanerType;
+import main.java.com.noviv.cleaner.main.text.CleanerText;
+import main.java.com.noviv.cleaner.main.gui.CleanerGUI;
+import main.java.com.noviv.cleaner.utils.CleanerType;
 import java.util.ArrayList;
 import java.util.Arrays;
 

@@ -1,8 +1,8 @@
-package main.java.cleaner.cleaners;
+package main.java.com.noviv.cleaner.cleaners;
 
 import java.io.File;
 import java.util.ArrayList;
-import main.java.cleaner.utils.CleanerTextUtils;
+import main.java.com.noviv.cleaner.utils.CleanerTextUtils;
 
 public class BruteDirectoryCleaner extends Cleaner {
 

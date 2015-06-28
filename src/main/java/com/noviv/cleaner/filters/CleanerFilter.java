@@ -1,4 +1,4 @@
-package main.java.cleaner.filters;
+package main.java.com.noviv.cleaner.filters;
 
 import java.io.File;
 

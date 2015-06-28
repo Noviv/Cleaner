@@ -1,4 +1,4 @@
-package main.java.cleaner.cleaners;
+package main.java.com.noviv.cleaner.cleaners;
 
 import java.io.File;
 import java.util.ArrayList;

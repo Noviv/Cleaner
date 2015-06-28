@@ -1,7 +1,7 @@
-package main.java.cleaner.cleaners;
+package main.java.com.noviv.cleaner.cleaners;
 
-import main.java.cleaner.filters.CleanerNet;
-import main.java.cleaner.utils.CleanerTextUtils;
+import main.java.com.noviv.cleaner.filters.CleanerNet;
+import main.java.com.noviv.cleaner.utils.CleanerTextUtils;
 import java.io.File;
 import java.util.ArrayList;
 import javax.swing.JProgressBar;

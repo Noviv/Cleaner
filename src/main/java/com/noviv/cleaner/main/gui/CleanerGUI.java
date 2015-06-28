@@ -1,10 +1,10 @@
-package main.java.cleaner.main.gui;
+package main.java.com.noviv.cleaner.main.gui;
 
-import main.java.cleaner.cleaners.BruteDirectoryCleaner;
-import main.java.cleaner.cleaners.BruteDualCleaner;
-import main.java.cleaner.cleaners.BruteFileCleaner;
-import main.java.cleaner.cleaners.Cleaner;
-import main.java.cleaner.utils.CleanerTextUtils;
+import main.java.com.noviv.cleaner.cleaners.BruteDirectoryCleaner;
+import main.java.com.noviv.cleaner.cleaners.BruteDualCleaner;
+import main.java.com.noviv.cleaner.cleaners.BruteFileCleaner;
+import main.java.com.noviv.cleaner.cleaners.Cleaner;
+import main.java.com.noviv.cleaner.utils.CleanerTextUtils;
 import java.awt.Desktop;
 import java.io.File;
 import java.util.ArrayList;
