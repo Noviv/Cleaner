@@ -4,6 +4,10 @@ jdk:
   - oraclejdk8
 
   
-before_script: ant test
+before_script:
+  - ant test
+  - mvn validate
 
-script: ant compile
+script:
+  - ant compile
+  - mvn test
