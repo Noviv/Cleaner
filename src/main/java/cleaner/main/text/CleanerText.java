@@ -44,6 +44,7 @@ public class CleanerText {
                 for (File f : empties) {
                     f.delete();
                 }
+                exit();
                 break;
             case "a":
                 for (File f : empties) {
@@ -54,6 +55,7 @@ public class CleanerText {
                         System.out.println("Failed to delete " + fp);
                     }
                 }
+                exit();
                 break;
             case "f":
                 for (File f : empties) {
@@ -62,11 +64,17 @@ public class CleanerText {
                         System.out.println("Failed to delete " + fp);
                     }
                 }
+                exit();
                 break;
             case "n":
-                System.out.println("\nCleaner completed and sucessfully exited.");
-                System.exit(0);
+                System.out.println("No files deleted.");
+                exit();
                 break;
         }
+    }
+
+    private void exit() {
+        System.out.println("\nCleaner completed and sucessfully exited.");
+        System.exit(0);
     }
 }

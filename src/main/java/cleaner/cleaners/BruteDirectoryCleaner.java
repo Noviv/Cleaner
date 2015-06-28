@@ -21,6 +21,7 @@ public class BruteDirectoryCleaner extends Cleaner {
         }
         fire(root);
         if (text) {
+            CleanerTextUtils.setDirStatus(empties.size(), 100.0);
             CleanerTextUtils.finish("Directory");
         }
         return empties;

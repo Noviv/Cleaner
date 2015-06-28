@@ -1,6 +1,6 @@
-cleaner.cleaners
-cleaner.filters
-cleaner.main
-cleaner.main.gui
-cleaner.main.text
-cleaner.utils
+main.java.cleaner.cleaners
+main.java.cleaner.filters
+main.java.cleaner.main
+main.java.cleaner.main.gui
+main.java.cleaner.main.text
+main.java.cleaner.utils

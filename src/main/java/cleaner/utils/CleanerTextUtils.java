@@ -9,11 +9,11 @@ public class CleanerTextUtils {
     }
 
     public static void setDirStatus(int num, double percent) {
-        System.out.print("\r" + num + " empty directories found, " + percent + "% complete.");
+        System.out.print("\r" + num + " useless directories found, " + percent + "% complete.");
     }
 
     public static void setFileStatus(int num, double percent) {
-        System.out.print("\r" + num + " empty files found, " + percent + "% complete.");
+        System.out.print("\r" + num + " useless files found, " + percent + "% complete.");
     }
 
     public static void finish(String type) {
@@ -23,7 +23,7 @@ public class CleanerTextUtils {
     public static boolean askPrintEmpties(String typePlural) {
         try {
             Scanner s = new Scanner(System.in);
-            System.out.print("\nWould you like to see all empty " + typePlural + "? (y/n): ");
+            System.out.print("\nWould you like to see all useless " + typePlural + "? (y/n): ");
             switch (s.next().toLowerCase()) {
                 case "y":
                     return true;
@@ -44,7 +44,7 @@ public class CleanerTextUtils {
     public static String askAutoDelete(String typePlural) {
         try {
             Scanner s = new Scanner(System.in);
-            System.out.print("\nWould you like to remove all empty " + typePlural
+            System.out.print("\nWould you like to remove all useless " + typePlural
                     + "? (n = no, q = yes [no output] a = yes [all output] f = yes [fail output]): ");
             String str = s.next().toLowerCase();
             switch (str) {

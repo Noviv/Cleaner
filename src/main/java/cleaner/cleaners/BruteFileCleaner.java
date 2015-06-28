@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import main.java.cleaner.utils.CleanerTextUtils;
 
 public class BruteFileCleaner extends Cleaner {
-    
+
     public BruteFileCleaner(ArrayList<String> excludedPaths_, boolean text_) {
         total = root.getTotalSpace() - root.getUsableSpace();
         empties = new ArrayList<>();
@@ -15,10 +15,10 @@ public class BruteFileCleaner extends Cleaner {
         excludedPaths = excludedPaths_;
         sum = 0l;
         text = text_;
-        
+
         net.addFilter(new CleanerUselessFileFilter());
     }
-    
+
     @Override
     public ArrayList<File> getEmpties() {
         if (text) {
@@ -26,11 +26,12 @@ public class BruteFileCleaner extends Cleaner {
         }
         fire(root);
         if (text) {
+            CleanerTextUtils.setFileStatus(empties.size(), 100.0);
             CleanerTextUtils.finish("File");
         }
         return empties;
     }
-    
+
     private void fire(File node) {
         if (excludedPaths.contains(node.getAbsolutePath())) {
             return;
