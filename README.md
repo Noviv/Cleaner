@@ -1,4 +1,4 @@
-# Cleaner [![Build Status](https://travis-ci.org/Noviv/Cleaner.svg?branch=master)](https://travis-ci.org/Noviv/Cleaner) [![Code Climate](https://codeclimate.com/github/Noviv/Cleaner/badges/gpa.svg)](https://codeclimate.com/github/Noviv/Cleaner) [![Code Health](https://landscape.io/github/Noviv/Cleaner/master/landscape.svg?style=flat)](https://landscape.io/github/Noviv/Cleaner/master)
+# Cleaner [![Build Status](https://travis-ci.org/Noviv/Cleaner.svg?branch=master)](https://travis-ci.org/Noviv/Cleaner) [![Code Health](https://landscape.io/github/Noviv/Cleaner/master/landscape.svg?style=flat)](https://landscape.io/github/Noviv/Cleaner/master)
 
 A text and GUI based tool that finds all useless/empty files and directories and can remove them.<br>
 
