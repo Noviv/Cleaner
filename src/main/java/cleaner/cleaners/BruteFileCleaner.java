@@ -1,10 +1,10 @@
-package cleaner.cleaners;
+package main.java.cleaner.cleaners;
 
-import cleaner.filters.CleanerNet;
-import cleaner.filters.CleanerUselessFileFilter;
+import main.java.cleaner.filters.CleanerNet;
+import main.java.cleaner.filters.CleanerUselessFileFilter;
 import java.io.File;
 import java.util.ArrayList;
-import cleaner.utils.CleanerTextUtils;
+import main.java.cleaner.utils.CleanerTextUtils;
 
 public class BruteFileCleaner extends Cleaner {
     

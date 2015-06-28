@@ -1,8 +1,8 @@
-package cleaner.main;
+package main.java.cleaner.main;
 
-import cleaner.main.text.CleanerText;
-import cleaner.main.gui.CleanerGUI;
-import cleaner.utils.CleanerType;
+import main.java.cleaner.main.text.CleanerText;
+import main.java.cleaner.main.gui.CleanerGUI;
+import main.java.cleaner.utils.CleanerType;
 import java.util.ArrayList;
 import java.util.Arrays;
 

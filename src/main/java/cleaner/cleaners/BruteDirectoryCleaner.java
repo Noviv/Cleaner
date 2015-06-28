@@ -1,8 +1,8 @@
-package cleaner.cleaners;
+package main.java.cleaner.cleaners;
 
 import java.io.File;
 import java.util.ArrayList;
-import cleaner.utils.CleanerTextUtils;
+import main.java.cleaner.utils.CleanerTextUtils;
 
 public class BruteDirectoryCleaner extends Cleaner {
 

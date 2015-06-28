@@ -1,4 +1,4 @@
-package cleaner.filters;
+package main.java.cleaner.filters;
 
 import java.io.File;
 

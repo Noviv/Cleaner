@@ -1,4 +1,4 @@
-package cleaner.utils;
+package main.java.cleaner.utils;
 
 public enum CleanerType {
 

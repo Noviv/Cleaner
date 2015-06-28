@@ -1,13 +1,13 @@
-package cleaner.main.text;
+package main.java.cleaner.main.text;
 
-import cleaner.utils.CleanerType;
+import main.java.cleaner.utils.CleanerType;
 import java.io.File;
 import java.util.ArrayList;
-import cleaner.cleaners.BruteDirectoryCleaner;
-import cleaner.cleaners.BruteDualCleaner;
-import cleaner.cleaners.BruteFileCleaner;
-import cleaner.cleaners.Cleaner;
-import cleaner.utils.CleanerTextUtils;
+import main.java.cleaner.cleaners.BruteDirectoryCleaner;
+import main.java.cleaner.cleaners.BruteDualCleaner;
+import main.java.cleaner.cleaners.BruteFileCleaner;
+import main.java.cleaner.cleaners.Cleaner;
+import main.java.cleaner.utils.CleanerTextUtils;
 
 public class CleanerText {
 
