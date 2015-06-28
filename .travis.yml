@@ -13,6 +13,6 @@ addons:
       name: "Noviv/Cleaner"
       description: "A text and GUI based tool that finds all useless/empty files and directories and can remove them."
     notification_email: mwebbmwebb@gmail.com
-    build_command_prepend: ""
-    build_command:   "ant"
-    branch_pattern: coverity_scan
+    build_command_prepend: "ant test"
+    build_command: "ant"
+    branch_pattern: master
