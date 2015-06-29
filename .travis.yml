@@ -10,3 +10,4 @@ before_script:
 script:
   - ant compile
   - mvn test
+  - mvn package
