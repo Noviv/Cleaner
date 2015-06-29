@@ -1,9 +1,10 @@
 package main.java.com.noviv.cleaner.cleaners;
 
 import main.java.com.noviv.cleaner.filters.CleanerNet;
-import main.java.com.noviv.cleaner.filters.CleanerUselessFileFilter;
+import main.java.com.noviv.cleaner.filters.file.CleanerUselessFileFilter;
 import java.io.File;
 import java.util.ArrayList;
+import main.java.com.noviv.cleaner.filters.FinalizeFilterCheck;
 import main.java.com.noviv.cleaner.utils.CleanerTextUtils;
 
 public class BruteFileCleaner extends Cleaner {
@@ -25,6 +26,7 @@ public class BruteFileCleaner extends Cleaner {
             CleanerTextUtils.start("File");
         }
         fire(root);
+        empties = FinalizeFilterCheck.finalize(empties);
         if (text) {
             CleanerTextUtils.setFileStatus(empties.size(), 100.0);
             CleanerTextUtils.finish("File");

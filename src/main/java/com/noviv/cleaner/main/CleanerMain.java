@@ -25,7 +25,7 @@ public class CleanerMain {
                         break;
                 }
             } else {
-                System.out.println("No option, defaulting to directory cleaning.");
+                System.out.println("No type parameter found, defaulting to directory cleaning.");
                 new CleanerText(exc, CleanerType.DIRECTORY);
             }
         } else if (args.length == 0) {

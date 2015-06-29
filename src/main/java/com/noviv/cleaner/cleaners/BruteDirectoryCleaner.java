@@ -2,6 +2,7 @@ package main.java.com.noviv.cleaner.cleaners;
 
 import java.io.File;
 import java.util.ArrayList;
+import main.java.com.noviv.cleaner.filters.FinalizeFilterCheck;
 import main.java.com.noviv.cleaner.utils.CleanerTextUtils;
 
 public class BruteDirectoryCleaner extends Cleaner {
@@ -20,6 +21,7 @@ public class BruteDirectoryCleaner extends Cleaner {
             CleanerTextUtils.start("Directory");
         }
         fire(root);
+        empties = FinalizeFilterCheck.finalize(empties);
         if (text) {
             CleanerTextUtils.setDirStatus(empties.size(), 100.0);
             CleanerTextUtils.finish("Directory");
@@ -34,7 +36,7 @@ public class BruteDirectoryCleaner extends Cleaner {
         for (File file : node.listFiles()) {
             if (file.isDirectory()) {
                 if (file.listFiles() != null) {
-                    if (file.listFiles().length == 0) {
+                    if (file.listFiles().length == 0 || !net.pass(file)) {
                         empties.add(file);
                     } else {
                         fire(file);
